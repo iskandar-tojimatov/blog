@@ -1,8 +1,7 @@
 <template>
     <Transition name="fade" mode="out-in">
         <div class="loader-bg">
-            <div class="loader"></div>
-    
+          <section class="paytm-loader"></section>
         </div>
       </Transition>
 

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <loader-component v-if="isLoading"></loader-component>
+
     <article-detail-component v-else></article-detail-component>
   </div>
 </template>

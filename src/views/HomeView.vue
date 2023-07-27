@@ -1,9 +1,11 @@
 <template>
   <div class="container">
     <loader-component v-if="isLoading"></loader-component>
-    <div class="my-cards">
-        <card-component v-for="article in data" :key="article.id" :article="article"></card-component>
-    </div>
+    <Transition name="slide-fade">
+      <div v-if="data" class="my-cards">
+          <card-component v-for="article in data" :key="article.id" :article="article"></card-component>
+      </div>
+    </Transition>
   </div>
 </template>
 
