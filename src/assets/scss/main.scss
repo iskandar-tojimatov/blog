@@ -32,6 +32,12 @@ footer{ min-height:50px; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
+    @media (max-width:1250px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:750px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 .dropdown-toggle{
     &::after{
@@ -75,19 +81,45 @@ footer{ min-height:50px; }
 .my-nav{
     background: #545555;
 }
+.logo{
+    img{
+        @media (max-width:750px) {
+            width: 80px !important;
+        }
+
+    }
+}
 .my-card-bg{
     background: #f9f9f9;
 }
 .footer{
     background: #f9f9f9;
 }
+#footer{
+    @media (max-width:750px) {
+       display: flex;
+       flex-direction: column;
+    }
+}
 body {
     background: #6f6f6f;
     font-family: 'Roboto', sans-serif;
 }
+.container{
+    .row{
+        @media (max-width:950px) {
+            width: 100%;
+            margin: auto;
+         }
+    }
+}
 
 .login-box {
     margin-top: 25px;
+    @media (max-width:950px) {
+        width: 100%;
+        margin-top: 0 !important;
+     }
     padding: 24px;
     height: auto;
     background: #424445;
@@ -116,6 +148,40 @@ body {
 .login-form {
     margin-top: 25px;
     text-align: left;
+    @media (max-width:950px) {
+        width: 100%;
+        margin-top: 12px;
+     }
+}
+.my-card-bg {
+    @media (max-width:950px) {
+        padding: 24px !important;
+     }
+     .btn-outline-dark{
+        @media (max-width:950px) {
+            margin: 0 !important;
+         }
+     }
+     .my-detail{
+        @media (max-width:950px) {
+            margin-top: -20px !important;
+         }
+     }
+}
+.my-bottom {
+    @media (max-width:950px) {
+        display: flex;
+        flex-direction: column;
+     }
+}
+
+
+.bottom{
+    @media (max-width:750px) {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+     }
 }
 
 .input {

@@ -2,7 +2,7 @@
     <Transition name="slide-fade">
         <div v-if="articleDetail" class="card details-card p-5 my-card-bg">
             <button  @click="$router.push('/')" style="height: 40px; width: 40px; margin: -30px; 0 0 -30px" class="rounded-circle btn btn-outline-dark d-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-left"></i></button>
-            <div class="row gap-3 mt-4">
+            <div class="row my-detail gap-3 mt-4">
                 <div class="col-md-2 col-sm-12 d-flex flex-column align-items-center gap-2">
                     <div style="height: 120px; width: 120px;" class="rounded-circle bg-dark d-flex align-items-center justify-content-center">
                         <span class="color-white">{{ articleDetail.author.username[0] }}</span>
@@ -21,7 +21,7 @@
                         </p>
     
                         <hr>
-                        <div class="w-100 d-flex align-items-center justify-content-between">
+                        <div class="w-100 my-bottom d-flex align-items-center justify-content-between">
                             <p class="product-title mt-4 mb-1">{{new Date(articleDetail.createdAt).toLocaleString('us')}}</p>
                             <p class="product-title mt-4 mb-1">{{new Date(articleDetail.updatedAt).toLocaleString('us')}}</p>
                         </div>

@@ -3,7 +3,7 @@
         <div class="row">
             <loader-component v-if="isLoading"></loader-component>
             <Transition v-else name="slide-fade">
-                <div v-if="article" class="col-lg-10 col-md-8 m-auto login-box text-center d-flex align-items-center flex-column">
+                <div v-if="article" class="col-lg-10 col-md-12 m-auto login-box text-center d-flex align-items-center flex-column">
                     <div class="col-lg-12 login-title">
                         Edit Article
                     </div>
