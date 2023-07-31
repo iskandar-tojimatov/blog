@@ -9,18 +9,9 @@
                 <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
                         <form @submit.prevent>
-                            <div class="form-group">
-                                <label class="form-control-label">Title</label>
-                                <input type="text" v-model="title" class="form-control input" i>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Description</label>
-                                <textarea v-model="description" class="form-control input" name="" id=""></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label">Body</label>
-                                <textarea v-model="body" class="form-control input"></textarea>
-                            </div>
+                            <input-component :type="'text'" :label="'Title'" v-model="title"></input-component>
+                            <input-component :type="'text'" :label="'Description'" v-model="description"></input-component>
+                            <input-component :type="'text'" :label="'Body'" v-model="body"></input-component>
 
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-6 login-btm login-text">
@@ -45,7 +36,9 @@
 
 <script>
 import { mapState } from 'vuex'
+import InputComponent from '../components/InputComponent.vue'
     export default {
+  components: { InputComponent },
         data() {
             return {
                 title:'',
